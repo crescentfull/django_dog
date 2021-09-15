@@ -11,7 +11,7 @@ class Owners(models.Model):
         db_table = "owners"
 
 class Dogs(models.Model):
-    owner_id = models.ForeignKey("Owners",on_delete=models.CASCADE)
+    owner    = models.ForeignKey("Owners",on_delete=models.CASCADE)
     name     = models.CharField(max_length=45)
     age      = models.IntegerField()
 
